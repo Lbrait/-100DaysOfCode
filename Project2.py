@@ -1,0 +1,10 @@
+from time import sleep
+print('-=' * 5, '\033[4;33mWelcome to the tip calculator!\033[m', '-=' * 5)
+bill = float(input('What was the total bill? '))
+p = int(input('How many people to split the bill? '))
+tip = int(input('What percentage tip would you like to give? 10, 12 or 15? '))
+cbill = round((bill + tip) / p, 2)
+print()
+print('Calculating tip...')
+sleep(1)
+print(f'\033[1;32mEach person should pay: R${cbill}')
